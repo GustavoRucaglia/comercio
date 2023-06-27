@@ -30,6 +30,12 @@ public class Produto {
 	public void setPreco(double preco) {
 		this.preco = preco;
 	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	
 	
 
