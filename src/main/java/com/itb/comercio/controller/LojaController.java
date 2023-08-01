@@ -11,12 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.itb.comercio.model.Produto;
 
 @Controller
-@RequestMapping("/comercio/produto")
+@RequestMapping("/comercio/produtos")
 public class LojaController {
 	
 	//Array com capacidade flexível
-	
-	
 	
 	@GetMapping("/listar")
 	public String listarProdutos(Model model) {
@@ -26,14 +24,14 @@ public class LojaController {
 		p1.setId(20l);
 		p1.setName("maquina de lavar");
 		p1.setDescreption("Maquina de lavar Brastemp 12l");
-		p1.setCodeBar("AAJAJAJ");
+		p1.setCodeBarras("AAJAJAJ");
 		p1.setPreco(2100.00);
 		
 		Produto p2 = new Produto();
 		p2.setId(10l);
 		p2.setName("Torradeira");
 		p2.setDescreption("Torradeira eletrolux");
-		p2.setCodeBar("AJHGS");
+		p2.setCodeBarras("AJHGS");
 		p2.setPreco(150.00);
 		
 		// Guardando os produtos no array
@@ -42,7 +40,12 @@ public class LojaController {
 		//Passando a lista de produtos para o front-end
 		model.addAttribute("listaDeProdutos", listaDeProdutos);
 		
-		
+		System.out.println(listaDeProdutos.size());
 		return "produtos";
+	}
+	
+	@GetMapping("/novo-produto")
+	public String novoProduto(Model model) {
+		return "novoproduto";
 	}
 }

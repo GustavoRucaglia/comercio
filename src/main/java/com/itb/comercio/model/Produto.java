@@ -4,7 +4,7 @@ public class Produto {
 	private Long id;
 	private String name;
 	private String descreption;
-	private String codeBar;
+	private String codeBarras;
 	private double preco;
 	public Long getId() {
 		return id;
@@ -18,11 +18,11 @@ public class Produto {
 	public void setDescreption(String descreption) {
 		this.descreption = descreption;
 	}
-	public String getCodeBar() {
-		return codeBar;
+	public String getCodeBarras() {
+		return codeBarras;
 	}
-	public void setCodeBar(String codeBar) {
-		this.codeBar = codeBar;
+	public void setCodeBarras(String codeBar) {
+		this.codeBarras = codeBar;
 	}
 	public double getPreco() {
 		return preco;
